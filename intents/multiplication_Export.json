@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "multiplication",
+    "version": "3",
+    "fulfillmentActivity": {
+      "type": "CodeHook"
+    },
+    "sampleUtterances": [
+      "multiply",
+      "multiplication",
+      "i want to do multiplication",
+      "multiply {numone} and {numtwo}",
+      "multiplication of {numone} and {numtwo}",
+      "{numone} multiply {numtwo}",
+      "{numone} mul {numtwo}",
+      "{numone} x {numtwo}"
+    ],
+    "slots": [
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "NumOne For Multiplication"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 1,
+        "name": "numone"
+      },
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Numtwo For Multiplication"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 2,
+        "name": "numtwo"
+      }
+    ],
+    "slotTypes": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "division",
+    "version": "1",
+    "fulfillmentActivity": {
+      "type": "CodeHook"
+    },
+    "sampleUtterances": [
+      "division",
+      "divide",
+      "i want to do division",
+      "division of two numbers",
+      "{numone} divide {numtwo}",
+      "{numone} divide by {numtwo}"
+    ],
+    "slots": [
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "NumOne For Division"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 1,
+        "name": "numone"
+      },
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "NumTwo For Division"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 2,
+        "name": "numtwo"
+      }
+    ],
+    "slotTypes": []
+  }
+}

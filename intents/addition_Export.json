@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "addition",
+    "version": "2",
+    "fulfillmentActivity": {
+      "type": "CodeHook"
+    },
+    "sampleUtterances": [
+      "add",
+      "i want to do addition",
+      "i want to add two number",
+      "i want to do add",
+      "add {numone} and {numtwo}",
+      "addition of {numone} and {numtwo}"
+    ],
+    "slots": [
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "First Number For Addition"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 1,
+        "name": "numone"
+      },
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.NUMBER",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Second Number For Addition"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 2,
+        "name": "numtwo"
+      }
+    ],
+    "slotTypes": []
+  }
+}
